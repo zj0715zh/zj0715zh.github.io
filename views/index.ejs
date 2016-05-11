@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=title %></title>
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+	<header><img src="/img/header.png" /></header>
+	<div class="container-fluid" style="width:1000px;margin-top:10px">
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="row-fluid">
+				<% movies.forEach(function(item){ %>
+					<div class="col-xs-3 span3">
+						<a href="/detail/<%=item.movieid%>"><section><img src="<%=item.movieimg %>" width="100%" /></section></a>
+						<a href="/detail/<%=item.movieid%>"><h5 style="text-align:center"><%=item.moviename %></h5></a>
+					</div>
+				<% }) %>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="jquery.js"></script>
+<script src="/bootstrap/dist/js/bootstrap.js"></script>
+</html>
